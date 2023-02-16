@@ -1,8 +1,10 @@
 #include <stdio.h>
 /**
- * main- Entry
- * Description: 'printf'
- * return: Always 0
+ * main- Entry point
+ *
+ * Description: 'task 5 using printf'
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
