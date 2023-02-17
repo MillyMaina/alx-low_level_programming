@@ -1,5 +1,6 @@
 /*
  * File: 9-print_comb.c
+ * Auth: Millicent Maina
  */
 
 #include <stdio.h>
