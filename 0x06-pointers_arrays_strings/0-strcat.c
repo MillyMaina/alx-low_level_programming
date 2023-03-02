@@ -1,35 +1,27 @@
-#include <stdio.h>
+/*
+ * File: 0-strcat.c
+ * Auth: Millicent
+ */
 
-char *my_strcat(char *dest, const char *src) {
-    size_t i = 0, j = 0;
+#include "main.h"
 
-#ifdef putchar
-    // just using the putchar identifier for fun
-#endif
+/**
+ * strcat - Concatenates the string pointed to by @src, including the terminating
+ *          null byte, to the end of the string pointed to by @dest.
+ * @dest: A pointer to the string to be concatenated upon.
+ * @src: The source string to be appended to @dest.
+ *
+ * Return: A pointer to the destination string @dest.
+ */
+char *strcat(char *dest, const char *src)
+{
+	int index = 0, dest_len = 0;
 
-    // Find the end of the first string
-    while (dest[i] != '\0') {
-        i++;
-    }
+	while (dest[index++])
+		dest_len++;
 
-    // Append the second string to the end of the first string
-    while (src[j] != '\0') {
-        dest[i] = src[j];
-        i++;
-        j++;
-    }
+	for (index = 0; src[index]; index++)
+		dest[dest_len++] = src[index];
 
-    // Add a null terminator to the end of the concatenated string
-    dest[i] = '\0';
-
-    // return a pointer to dest.
-    return dest;
-}
-
-int main() {
-    char hello[20] = "Hello ";
-    char world[] = "World!";
-
-    printf("%s\n", my_strcat(hello, world));
-    return 0;
+	return (dest);
 }
